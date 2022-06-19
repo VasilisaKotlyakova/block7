@@ -12,13 +12,17 @@
   <header class="header">
     <div class="container">
       <div class="header__row">
-        <button class="header__button"><img src="img/before_burger.svg" alt="иконка меню"></button>
-        <div class="header__logo"><img src="img/Group.svg" alt="логотип"></div>
-        <button class="header__button button--call"><img src="img/call.svg" alt="иконка звонка"></button>
-        <button class="header__button button--chat"><img src="img/chat.svg" alt="иконка чата"></button>
-        <button class="header__button"><img src="img/profile.svg" alt="иконка профиля"></button>
-        <button class="header__button"><img src="img/repair.svg" alt="иконка ремонт"></button>
-        <button class="header__button"><img src="img/checkstatus.svg" alt="иконка поиск"></button>
+        <div class="header__button--row1">
+          <button class="header__button"><img src="img/before_burger.svg" alt="иконка меню"></button>
+          <div class="header__logo"><img src="img/Group.svg" alt="логотип"></div>
+        </div>
+        <div class="header__button--row2">
+          <button class="header__button button--call"><img src="img/call.svg" alt="иконка звонка"></button>
+          <button class="header__button button--chat"><img src="img/chat.svg" alt="иконка чата"></button>
+          <button class="header__button"><img src="img/profile.svg" alt="иконка профиля"></button>
+          <button class="header__button"><img src="img/repair.svg" alt="иконка ремонт"></button>
+          <button class="header__button"><img src="img/checkstatus.svg" alt="иконка поиск"></button>
+        </div>
       </div>
     </div>
   </header>
@@ -30,9 +34,9 @@
         <div class="container modal-content">
           
           <div class="aside-header__row">
-            <div class="aside-header__icon"><button><img src="img/burger.svg" alt="иконка крестик"></button></div>
+            <button class="aside-header__icon"></button>
             <div class="aside-header__logo"><a href="#"><img src="img/Group.svg" alt="логотип"></a></div>
-            <div class="aside-header__icon"><button><img src="img/search.svg" alt="иконка поиска"></button></div>
+            <button class="aside-header__icon"></button>
           </div>
         </div>
       </header>
@@ -57,9 +61,9 @@
       <div class="aside-information">
         <div class="aside-information__row">
           <div class="aside-information__icons">
-            <div class="aside-information__icon button--call"><button><img src="img/chat%20copy.svg" alt="иконка звонка"></button></div>
-            <div class="aside-information__icon button--chat"><button><img src="img/chat.svg" alt="иконка чата"></button></div>
-            <div class="aside-information__icon"><button><img src="img/profile.svg" alt="иконка профиля"></button></div>
+            <button class="aside-information__icon button--call"><img src="img/chat%20copy.svg" alt="иконка звонка"></button>
+            <button class="aside-information__icon button--chat"><img src="img/chat.svg" alt="иконка чата"></button>
+            <button class="aside-information__icon"><img src="img/profile.svg" alt="иконка профиля"></button>
           </div>
           <div class="aside-information__email">
             <a href="mailto:mail@cps.com">mail@cps.com</a>
@@ -73,11 +77,9 @@
       <footer class="aside-footer">
         <div class="container">
           <div class="aside-footer__languages">
-            <ul class="aside-footer__list">
-              <li><button>RU</button></li>
-              <li><button>EN</button></li>
-              <li><button>CH</button></li>
-            </ul>
+            <button class="aside-footer__language">RU</button>
+            <button class="aside-footer__language">EN</button>
+            <button class="aside-footer__language">CH</button>
           </div>
         </div>
       </footer>
@@ -99,10 +101,6 @@
         <p class="modal-feedback__confirm-text">Нажимая “отправить”, вы даете согласие на <span class="modal-feedback__pink">обработку персональных данных</span>  и соглашаетесь с нашей <span class="modal-feedback__pink">политикой конфиденциальности</span> </p>
         <button class="sender-btn modal-feedback__submit" type="submit">
           Отправить
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="24" height="24" rx="12" fill="#FF3E79"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8 11.9999L9.79155 9.229C9.3641 8.83529 9.36112 8.16138 9.78509 7.76392L9.92029 7.63716C10.3032 7.27818 10.8985 7.27633 11.2836 7.63294L15.9381 11.9426C15.9715 11.9735 15.9715 12.0263 15.9381 12.0572L11.3467 16.3085C10.9261 16.698 10.2758 16.696 9.85755 16.3039V16.3039C9.39446 15.8697 9.39771 15.1336 9.86462 14.7036L12.8 11.9999Z" fill="white"/>
-          </svg>
         </button>
       </form>
     </div>
@@ -125,6 +123,7 @@
             </div>
           </div>
           <nav class="main__list">
+            <div class="blur-left"></div>
             <ul>
                <li><a href="#">Ремонтируемые бренды</a></li>
                <li><a href="#">Дополнительные услуги</a></li>
@@ -133,6 +132,7 @@
                <li><a href="#">Специальные цены</a></li>
                <li><a href="#">Отзывы</a></li>
             </ul>
+            <div class="blur-right"></div>
           </nav>
           <div class="main__content">
             <div class="main__body">
@@ -140,8 +140,11 @@
                 <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
                 <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
               </div>
-              <button class="main__button">
+              <button class="main__button--open">
                 Читать далее
+              </button>
+              <button class="main__button--close hidden">
+                Свернуть
               </button>
             </div>
             <div class="main_image">
@@ -284,60 +287,62 @@
         <div class="price__row">
           <h2>Цены на услуги</h2>
           <div class="blur-left"></div>
-          <div class="price__card--head">
-            <h3>Ремонтные услуги</h3>
-            <h3>Цена</h3>
-            <h3>Срок</h3>
-          </div>
-          <div class="price__list swiper-wrapper">
-            <div class="price__card swiper-slide">
+          <div class="wrapper-price">
+            <div class="price__card--head">
               <h3>Ремонтные услуги</h3>
-              <p>Диагностика</p>
               <h3>Цена</h3>
-              <p>Бесплатно</p>
               <h3>Срок</h3>
-              <p>30 мин</p>
-              <button>Заказать</button>
             </div>
-            <div class="price__card swiper-slide">
-              <h3>Ремонтные услуги</h3>
-              <p>Замена дисплея</p>
-              <h3>Цена</h3>
-              <p>1 000 ₽</p>
-              <h3>Срок</h3>
-              <p>30-120 мин</p>
-              <button>Заказать</button>
-            </div>
-            <div class="price__card swiper-slide">
-              <h3>Ремонтные услуги</h3>
-              <p>Замена полифонического динамика</p>
-              <h3>Цена</h3>
-              <p>1 000 ₽</p>
-              <h3>Срок</h3>
-              <p>30-120 мин</p>
-              <button>Заказать</button>
-            </div>
-            <div class="price__card swiper-slide">
-              <h3>Ремонтные услуги</h3>
-              <p>Тестирование с выдачей технического заключения</p>
-              <h3>Цена</h3>
-              <p>1 000 ₽</p>
-              <h3>Срок</h3>
-              <p>30-120 мин</p>
-              <button>
-                Заказать
-              </button>
-            </div>
-            <div class="price__card swiper-slide">
-              <h3>Ремонтные услуги</h3>
-              <p>Замена программного обеспечения</p>
-              <h3>Цена</h3>
-              <p>1 000 ₽</p>
-              <h3>Срок</h3>
-              <p>30-120 мин</p>
-              <button>Заказать</button>
-            </div>
+            <div class="price__list swiper-wrapper">
+              <div class="price__card swiper-slide">
+                <h3>Ремонтные услуги</h3>
+                <p>Диагностика</p>
+                <h3>Цена</h3>
+                <p>Бесплатно</p>
+                <h3>Срок</h3>
+                <p>30 мин</p>
+                <button>Заказать</button>
+              </div>
+              <div class="price__card swiper-slide">
+                <h3>Ремонтные услуги</h3>
+                <p>Замена дисплея</p>
+                <h3>Цена</h3>
+                <p>1 000 ₽</p>
+                <h3>Срок</h3>
+                <p>30-120 мин</p>
+                <button>Заказать</button>
+              </div>
+              <div class="price__card swiper-slide">
+                <h3>Ремонтные услуги</h3>
+                <p>Замена полифонического динамика</p>
+                <h3>Цена</h3>
+                <p>1 000 ₽</p>
+                <h3>Срок</h3>
+                <p>30-120 мин</p>
+                <button>Заказать</button>
+              </div>
+              <div class="price__card swiper-slide">
+                <h3>Ремонтные услуги</h3>
+                <p>Тестирование с выдачей технического заключения</p>
+                <h3>Цена</h3>
+                <p>1 000 ₽</p>
+                <h3>Срок</h3>
+                <p>30-120 мин</p>
+                <button>
+                  Заказать
+                </button>
+              </div>
+              <div class="price__card swiper-slide">
+                <h3>Ремонтные услуги</h3>
+                <p>Замена программного обеспечения</p>
+                <h3>Цена</h3>
+                <p>1 000 ₽</p>
+                <h3>Срок</h3>
+                <p>30-120 мин</p>
+                <button>Заказать</button>
+              </div>
 
+            </div>
           </div>
           <div class="swiper-pagination"></div>
           <div class="blur-right"></div>
