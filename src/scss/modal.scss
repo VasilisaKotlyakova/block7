@@ -66,7 +66,6 @@
 .modal-feedback__form {
    display: flex;
    flex-direction: column;
-
  }
 
 .modal-feedback__input {
@@ -80,9 +79,54 @@
    color: $pink;
  }
 
+.modal-feedback__submit  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 119px;
+  height: 32px;
+  background-color: $pink;
+  border-radius: 16px;
 
-.modal-feedback__submit {
-   align-self: end;
-   margin-top: 27px;
- }
+  font-family: 'TT Lakes';
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 500;
 
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+
+  color: $white;
+  padding-left: 10px;
+
+  position: relative;
+  right: -200px;
+  top: 30px;
+}
+
+.modal-feedback__submit::after {
+  display: inline-block;
+  content: " ";
+  height: 24px;
+  width: 24px;
+  background-image: url(../img/goside.svg);
+  background-repeat: no-repeat;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+
+  .modal-feedback__close {
+    margin-left: -75px;
+    overflow: visible;
+    position: absolute;
+    top: 25px;
+  }
+
+  .modal-feedback__title, .modal-call__title {
+    margin-top: 40px;
+  }
+
+}

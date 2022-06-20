@@ -69,7 +69,7 @@ ul > li > a:hover {
   margin-top: 32px;
 }
 
-.main__button {
+.main__button--open, .main__button--close {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -86,7 +86,7 @@ ul > li > a:hover {
   font-weight: 500;
 }
 
-.main__button::before {
+.main__button--open::before {
   display: inline-block;
   content: " ";
   height: 24px;
@@ -95,6 +95,11 @@ ul > li > a:hover {
 }
 
 .main__button--close::before {
+  display: inline-block;
+  content: " ";
+  height: 24px;
+  width: 24px;
+  background-image: url(../img/expand.svg);
   transform: rotate(180deg);
 }
 
@@ -109,7 +114,7 @@ ul > li > a:hover {
   }
 
   .main__list {
-    overflow-x: scroll;
+    overflow: auto;
   }
 
   .main_image {
@@ -126,12 +131,38 @@ ul > li > a:hover {
   }
 
   .main__text {
-    height: 90px;
+    height: 86px;
     overflow: hidden;
+    margin-right: 20px;
   }
 
-  .main__list ul {
-    margin-left: 20px;
+  .main__text--open {
+    height: 230px;
+    margin-right: 20px;
+  }
+
+  .main__list .blur-right {
+    display: flex;
+    content: " ";
+    width: 24px;
+    height: 42px;
+    z-index: 5;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    position: absolute;
+    right: -5px;
+    top: 180px;
+  }
+
+  .main__list .blur-left {
+    display: flex;
+    content: " ";
+    width: 24px;
+    height: 81px;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    position: absolute;
+    z-index: 5;
+    left: -15px;
+    top: 180px;
   }
 
 }
@@ -147,7 +178,7 @@ ul > li > a:hover {
   }
 
   .main__list {
-    overflow-x: scroll;
+    overflow-x: auto;
     margin-bottom: 20px;
   }
 
@@ -167,7 +198,7 @@ ul > li > a:hover {
   }
 
   .main__image {
-    flex: 1 1 360px;
+    flex: 1 1 310px;
     margin-top: 40px;
   }
 
@@ -177,9 +208,34 @@ ul > li > a:hover {
     padding-right: 20px;
   }
 
-  .main__button{
+  .main__button--open, .main__button--close{
     margin-left: 10px;
     margin-top: 20px;
+  }
+
+  .main__text--open {
+    height: 200px;
+    margin-right: 20px;
+  }
+}
+
+@media(min-width: 940px) and (max-width: 1440px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: initial;
+  }
+
+  .main__image {
+    flex: 1 1 530px;
+    margin-right: 20px;
+  }
+
+  .main__image img {
+    width: 530px;
+    border-radius: 5px;
   }
 }
 
@@ -216,6 +272,11 @@ ul > li > a:hover {
 
   .main__row-button-1 {
     margin-right: -640px;
+  }
+
+  .main__row-button-1:hover, .main__row-button-2:hover {
+    opacity: 70%;
+    transition-duration: 0.5s;
   }
 
   .main__row-button-1 button, .main__row-button-2 button{
@@ -274,7 +335,7 @@ ul > li > a:hover {
     border-radius: 5px;
   }
 
-  .main__button{
+  .main__button--open,.main__button--close{
     margin-left: 30px;
     margin-top: 0px;
   }

@@ -65,12 +65,16 @@ h2 {
   opacity: 0.72;
 }
 
+.price__card button:hover {
+  opacity: 70%;
+  transition-duration: 0.5s;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
 
   .price__list {
     flex-wrap: nowrap;
-    align-content: flex-start;
-    min-width: 0px;
+    //min-width: 0px;
     margin-left: 10px;
     margin-bottom: 50px;
     margin-top: 20px;
@@ -179,7 +183,7 @@ h2 {
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     right: -5px;
-    bottom: -890px;
+    bottom: -100px;
   }
 
   .price__row .blur-left {
@@ -191,7 +195,7 @@ h2 {
     position: absolute;
     z-index: 5;
     left: -15px;
-    bottom: -890px;
+    bottom: -100px;
   }
 
   .price__text {
@@ -205,9 +209,19 @@ h2 {
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
-  .price__list {
+  .wrapper-price {
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    min-width: 768px;
+    max-width: 1439px;
+  }
+  .price__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+
     width: 730px;
     height: 324px;
     background-color: #FFFFFF;
@@ -215,6 +229,7 @@ h2 {
     border-radius: 6px;
 
     margin-left: 20px;
+    margin-right: 20px;
   }
 
   .price__card h3 {
@@ -227,6 +242,10 @@ h2 {
     justify-content: flex-start;
     align-content: center;
     height: 65px;
+  }
+
+  .price__card--head {
+    margin-left: -200px;
   }
 
   .price__card p:first-of-type {
@@ -349,8 +368,10 @@ h2 {
   }
 
   .price__list {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-content: center;
     width: 1056px;
     height: 324px;
     background-color: #FFFFFF;
@@ -358,6 +379,7 @@ h2 {
     border-radius: 6px;
 
     margin-left: 30px;
+   padding-right: 30px;
   }
 
   .price__card h3 {

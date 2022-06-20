@@ -9,7 +9,7 @@ h2 {
 .technique__list {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  //justify-content: center;
   align-content: space-between;
   flex-wrap: nowrap;
 }
@@ -40,6 +40,11 @@ h2 {
   margin-right: 16px;
 }
 
+.technique__card button:hover {
+  opacity: 70%;
+  transition-duration: 0.5s;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
   .technique__button--open {
     display: none;
@@ -47,10 +52,16 @@ h2 {
 
   .technique__list {
     flex-wrap: nowrap;
-    align-content: flex-start;
     min-width: 0px;
     margin-left: 10px;
     margin-bottom: 40px;
+  }
+
+  .technique__list.swiper-slide {
+    display: flex;
+    flex: 1 0 240px;
+    height: 160px;
+    order: 1;
   }
 
   .technique__row .swiper-pagination {
@@ -69,12 +80,12 @@ h2 {
     display: flex;
     content: " ";
     width: 24px;
-    height: 166px;
+    height: 160px;
     z-index: 5;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     right: -5px;
-    bottom: -535px;
+    bottom: 275px;
   }
 
   .technique__row .blur-left {
@@ -86,14 +97,17 @@ h2 {
     position: absolute;
     z-index: 5;
     left: -15px;
-    bottom: -535px;
+    bottom: 275px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
 
   .technique__list {
-    margin-left: 25px;
+    max-width: 1439px;
+    min-width: 768px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-top: 30px;
     overflow: hidden;
     flex-wrap: wrap;
@@ -105,9 +119,11 @@ h2 {
   }
 
   .technique__card {
-    margin-right: 25px;
+    flex: 1 1 224px;
+    margin-right: 15px;
     margin-bottom: 20px;
-    width: 224px;
+    //margin-left: 0px;
+    //width: 224px;
   }
 
   .technique__button--open, .technique__button--close {
@@ -152,16 +168,19 @@ h2 {
 
   h2 {
     height: 56px;
-    padding-left: 32px;
+    padding-left: 42px;
+    width: 1120px;
   }
 
   .technique__list {
-    margin-left: 30px;
+    justify-content: center;
+    width: 1120px;
+    margin-left: 20px;
     margin-top: 30px;
   }
 
   .technique__card {
-    margin-right: 32px;
+    margin-right: 20px;
   }
 
   .technique__button--open, .technique__button--close {
@@ -171,7 +190,7 @@ h2 {
 
     background-color: #F8F8F8;
     border: 1px solid #F8F8F8;
-    margin-left: 40px;
+    margin-left: 50px;
     margin-top: 10px;
     margin-bottom: 20px;
 

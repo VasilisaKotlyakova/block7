@@ -14,6 +14,11 @@ header {
   justify-content: space-between;
 }
 
+.header__button--row1, .header__button--row2 {
+  display: flex;
+  flex-direction: row;
+}
+
 button {
   background-color: $white;
   border: 1px solid $white;
@@ -42,17 +47,45 @@ button {
     left: 8px;
     border-radius: 1px;
   }
+
+  .header__button--row1 {
+    width: 200px;
+  }
+
+  .header__logo {
+    margin-left: 20px;
+  }
+
+  .header__button--row2 {
+    width: 120px;
+  }
+
+  .header__button:nth-child(5) {
+    margin-left: 20px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
 
-  .header__button:nth-child(1) {
-    margin-left: 10px;
-    margin-right: 10px;
+  .header__button--row1 {
+    width: 240px;
   }
 
-  .header__button:nth-child(2) {
-    margin-left: 20px;
+  .header__logo {
+    margin-left: 30px;
+  }
+
+  .header__button--row2 {
+    width: 420px;
+    margin-right: -140px;
+  }
+
+  .header__button:not(:nth-child(1)) {
+    margin-left: 10px;
+  }
+
+  .header__button:nth-child(4) {
+    margin-left: 30px;
   }
 
   .header__logo::before {
@@ -63,24 +96,11 @@ button {
     background-color: $bgDecorElem;
     position: relative;
     top: -7px;
-    left: -10px;
+    left: -15px;
     border-radius: 1px;
   }
 
-  .header__button:nth-child(3) {
-    margin-left: 260px;
-  }
-
-  .header__button:nth-child(3), .header__button:nth-child(4), .header__button:nth-child(5) {
-      margin-right: 10px;
-  }
-
-  .header__button:nth-child(6), .header__button:nth-child(7) {
-    margin-left: 10px;
-    margin-right: 0px;
-  }
-
-  .header__button:nth-child(6)::before {
+  .header__button:nth-child(4)::before {
     display: inline-block;
     content: "";
     height: 32px;
