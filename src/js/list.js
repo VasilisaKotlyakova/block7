@@ -55,3 +55,32 @@ buttonCloseTechnique.addEventListener('click', function(){
   //сужаем окно
   listTechnique.classList.remove('technique__list--open');
 });
+
+let buttonOpenText = document.querySelector('.main__button--open'); // ищем кнопку открытия текста
+let buttonCloseText = document.querySelector('.main__button--close'); // ищем кнопку закрытия текста
+let mainText = document.querySelector('.main__text'); // ищем текст
+
+
+//отслеживаем клик по кнопке развернуть
+buttonOpenText.addEventListener('click', function(){
+  //удаляем скрывающий класс у закрывающей кнопки - делаем его видимым
+  buttonCloseText.classList.remove('hidden');
+
+  //добавить класс у открывающей кнопки - делаем его невидимым
+  buttonOpenText.classList.add('hidden');
+
+  //расширяем окно
+  mainText.classList.add('main__text--open');
+});
+
+//отслеживаем клик по кнопке "закрыть список"
+buttonCloseText.addEventListener('click', function(){
+  //удаляем скрывающий класс у открывающей кнопки - делаем его видимым
+  buttonOpenText.classList.remove('hidden');
+
+  //добавить класс у закрывающей кнопки - делаем его невидимым
+  buttonCloseText.classList.add('hidden');
+
+  //сужаем окно
+  mainText.classList.remove('main__text--open');
+});

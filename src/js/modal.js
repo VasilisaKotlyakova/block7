@@ -15,6 +15,8 @@ const text = document.querySelector(".text");
 const email = document.querySelector(".email");
 const name = document.querySelector(".name");
 
+const wrapper = document.querySelector(".wrapper-main");
+
 
 chatButton.addEventListener("click", function() {
   hFeedback.classList.remove("hidden");
@@ -68,6 +70,19 @@ closeButton.addEventListener("click", function() {
   hCall.classList.toggle("hidden");
   hFeedback.classList.toggle("hidden");
   feedBackModal.classList.toggle("modal--hide");
+  header.classList.remove("opacity");
+  main.classList.remove("opacity");
+  aside.classList.remove("opacity");
+});
+
+wrapper.addEventListener("click", function() {
+  text.classList.remove("hidden");
+  name.classList.remove("hidden");
+  email.classList.remove("hidden");
+
+  hCall.classList.add("hidden");
+  hFeedback.classList.add("hidden");
+  feedBackModal.classList.add("modal--hide");
   header.classList.remove("opacity");
   main.classList.remove("opacity");
   aside.classList.remove("opacity");
