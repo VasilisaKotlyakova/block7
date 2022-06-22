@@ -19,9 +19,13 @@ button {
   background-color: white;
   border: 1px solid white; }
 
+.header__button, .header__logo {
+  cursor: pointer; }
+
 .header__button:hover, .header__logo:hover {
   opacity: 70%;
-  transition-duration: 0.5s; }
+  transition-duration: 0.5s;
+  cursor: pointer; }
 
 @media (min-width: 320px) and (max-width: 767px) {
   /*скрываем для разрешения 320px иконок в хэдере*/
@@ -198,7 +202,7 @@ ul > li > a:hover {
   .main__text--open {
     height: 230px;
     margin-right: 20px; }
-  .main__list .blur-right {
+  .main__list ul::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -208,15 +212,15 @@ ul > li > a:hover {
     position: absolute;
     right: -5px;
     top: 180px; }
-  .main__list .blur-left {
+  .main__list ul::before {
     display: flex;
     content: " ";
     width: 24px;
     height: 81px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     z-index: 5;
-    left: -15px;
+    left: -5px;
     top: 180px; } }
 
 @media (min-width: 768px) and (max-width: 1439px) {
@@ -381,7 +385,7 @@ ul > li > a:hover {
     flex: 1 0 240px;
     height: 72px;
     order: 1; }
-  .brand__row .blur-right {
+  .brand__list::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -391,15 +395,15 @@ ul > li > a:hover {
     position: absolute;
     right: -5px;
     top: 730px; }
-  .brand__row .blur-left {
+  .brand__list::before {
     display: flex;
     content: " ";
     width: 24px;
     height: 81px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     z-index: 5;
-    left: -15px;
+    left: -5px;
     top: 730px; } }
 
 @media (min-width: 768px) and (max-width: 1439px) {
@@ -499,7 +503,7 @@ h2 {
   display: flex;
   flex-direction: row;
   align-content: space-between;
-  flex-wrap: nowrap; }
+  flex-wrap: wrap; }
 
 .technique__card {
   display: flex;
@@ -547,7 +551,7 @@ h2 {
     background-color: #B5B6BC;
     width: 12px;
     height: 12px; }
-  .technique__row .blur-right {
+  .technique__list::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -555,18 +559,18 @@ h2 {
     z-index: 5;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
-    right: -5px;
-    bottom: 275px; }
-  .technique__row .blur-left {
+    right: 5px;
+    bottom: 0px; }
+  .technique__list::before {
     display: flex;
     content: " ";
     width: 24px;
     height: 166px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     z-index: 5;
-    left: -15px;
-    bottom: 275px; } }
+    left: -10px;
+    bottom: 0px; } }
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .technique__list {
@@ -620,9 +624,14 @@ h2 {
     justify-content: center;
     width: 1120px;
     margin-left: 20px;
-    margin-top: 30px; }
+    margin-top: 30px;
+    overflow: hidden;
+    height: 180px; }
+  .technique__list--open {
+    height: 350px; }
   .technique__card {
-    margin-right: 20px; }
+    margin-right: 20px;
+    margin-bottom: 20px; }
   .technique__button--open, .technique__button--close {
     display: flex;
     flex-direction: row;
@@ -742,7 +751,7 @@ h2 {
     width: 24px;
     background-image: url(./static/goside.svg);
     background-repeat: no-repeat;
-    padding-right: 5px;
+    padding-right: 10px;
     padding-bottom: 5px; }
   .price__card {
     display: flex;
@@ -784,7 +793,7 @@ h2 {
     background-color: #B5B6BC;
     width: 12px;
     height: 12px; }
-  .price__row .blur-right {
+  .price__list::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -793,17 +802,17 @@ h2 {
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     right: -5px;
-    bottom: -100px; }
-  .price__row .blur-left {
+    bottom: 0px; }
+  .price__list::before {
     display: flex;
     content: " ";
     width: 24px;
     height: 210px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     z-index: 5;
     left: -15px;
-    bottom: -100px; }
+    bottom: 0px; }
   .price__text {
     margin-left: 10px; }
   .price__button {
@@ -1205,7 +1214,8 @@ h2 {
   margin-right: 7px;
   color: black;
   border: 1px solid white;
-  background-color: white; }
+  background-color: white;
+  cursor: pointer; }
 
 .aside-footer__language:hover {
   text-decoration: none;
@@ -1217,16 +1227,55 @@ h2 {
   transition-property: color;
   transition-duration: 0.3s; }
 
+@-webkit-keyframes aside-open {
+  from {
+    position: absolute;
+    z-index: 1;
+    left: -320px;
+    background-color: white; }
+  to {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: white; } }
+
+@keyframes aside-open {
+  from {
+    position: absolute;
+    z-index: 1;
+    left: -320px;
+    background-color: white; }
+  to {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: white; } }
+
 @media (min-width: 320px) and (max-width: 767px) {
   .modal {
     display: none; }
   .aside {
     width: 320px;
-    background-color: white; }
+    background-color: white;
+    -webkit-animation-name: aside-open;
+            animation-name: aside-open;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
   .aside-menu {
     flex: 1 1 320px; } }
 
 @media (min-width: 768px) and (max-width: 1439px) {
+  .aside {
+    -webkit-animation-name: aside-open;
+            animation-name: aside-open;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
   .aside-menu {
     flex: 1 1 320px; }
   .modal {
@@ -1261,7 +1310,43 @@ h2 {
   right: 0;
   z-index: 2;
   height: 1950px;
-  background-color: white; }
+  background-color: white;
+  -webkit-animation-name: modal-open;
+          animation-name: modal-open;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes modal-open {
+  from {
+    position: absolute;
+    z-index: 1;
+    right: -320px;
+    height: 1950px;
+    background-color: white; }
+  to {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    height: 1950px;
+    background-color: white; } }
+
+@keyframes modal-open {
+  from {
+    position: absolute;
+    z-index: 1;
+    right: -320px;
+    height: 1950px;
+    background-color: white; }
+  to {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    height: 1950px;
+    background-color: white; } }
 
 .modal--hide {
   display: none; }
@@ -1421,26 +1506,33 @@ button.hidden {
 .opacity {
   opacity: 0.1; }
 
-@media (width: 1440px) {
-  .wrapper-main {
-    min-width: 1440px;
-    min-height: 100%;
-    overflow: hidden;
-    margin-left: 320px; } }
+button {
+  cursor: pointer;
+  z-index: 10; }
 
-@media (min-width: 1450px) {
+@media (min-width: 1440px) {
   h2 {
     width: 1040px !important; }
+  .aside {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    padding-bottom: 1000px; }
+  body .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; }
+  body {
+    width: 1440px;
+    margin: auto; }
   .wrapper-main {
-    min-width: 1440px;
-    min-height: 100%;
+    height: 100%;
     overflow: hidden;
-    margin-left: 160px;
     margin-top: 0px;
     padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center; } }
+    flex-direction: column; } }
 
 .brand__list {
   display: flex;
@@ -1494,7 +1586,7 @@ button.hidden {
     flex: 1 0 240px;
     height: 72px;
     order: 1; }
-  .brand__row .blur-right {
+  .brand__list::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -1504,15 +1596,15 @@ button.hidden {
     position: absolute;
     right: -5px;
     top: 730px; }
-  .brand__row .blur-left {
+  .brand__list::before {
     display: flex;
     content: " ";
     width: 24px;
     height: 81px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     z-index: 5;
-    left: -15px;
+    left: -5px;
     top: 730px; } }
 
 @media (min-width: 768px) and (max-width: 1439px) {
@@ -1612,7 +1704,7 @@ h2 {
   display: flex;
   flex-direction: row;
   align-content: space-between;
-  flex-wrap: nowrap; }
+  flex-wrap: wrap; }
 
 .technique__card {
   display: flex;
@@ -1660,7 +1752,7 @@ h2 {
     background-color: #B5B6BC;
     width: 12px;
     height: 12px; }
-  .technique__row .blur-right {
+  .technique__list::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -1668,18 +1760,18 @@ h2 {
     z-index: 5;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
-    right: -5px;
-    bottom: 275px; }
-  .technique__row .blur-left {
+    right: 5px;
+    bottom: 0px; }
+  .technique__list::before {
     display: flex;
     content: " ";
     width: 24px;
     height: 166px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     z-index: 5;
-    left: -15px;
-    bottom: 275px; } }
+    left: -10px;
+    bottom: 0px; } }
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .technique__list {
@@ -1733,9 +1825,14 @@ h2 {
     justify-content: center;
     width: 1120px;
     margin-left: 20px;
-    margin-top: 30px; }
+    margin-top: 30px;
+    overflow: hidden;
+    height: 180px; }
+  .technique__list--open {
+    height: 350px; }
   .technique__card {
-    margin-right: 20px; }
+    margin-right: 20px;
+    margin-bottom: 20px; }
   .technique__button--open, .technique__button--close {
     display: flex;
     flex-direction: row;
@@ -1855,7 +1952,7 @@ h2 {
     width: 24px;
     background-image: url(./static/goside.svg);
     background-repeat: no-repeat;
-    padding-right: 5px;
+    padding-right: 10px;
     padding-bottom: 5px; }
   .price__card {
     display: flex;
@@ -1897,7 +1994,7 @@ h2 {
     background-color: #B5B6BC;
     width: 12px;
     height: 12px; }
-  .price__row .blur-right {
+  .price__list::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -1906,17 +2003,17 @@ h2 {
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     right: -5px;
-    bottom: -100px; }
-  .price__row .blur-left {
+    bottom: 0px; }
+  .price__list::before {
     display: flex;
     content: " ";
     width: 24px;
     height: 210px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     z-index: 5;
     left: -15px;
-    bottom: -100px; }
+    bottom: 0px; }
   .price__text {
     margin-left: 10px; }
   .price__button {
