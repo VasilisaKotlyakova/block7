@@ -63,14 +63,17 @@ let mainText = document.querySelector('.main__text'); // ищем текст
 
 //отслеживаем клик по кнопке развернуть
 buttonOpenText.addEventListener('click', function(){
-  //удаляем скрывающий класс у закрывающей кнопки - делаем его видимым
-  buttonCloseText.classList.remove('hidden');
 
-  //добавить класс у открывающей кнопки - делаем его невидимым
-  buttonOpenText.classList.add('hidden');
+  if(window.innerWidth >= 320 && window.innerWidth < 1440) {
+    //удаляем скрывающий класс у закрывающей кнопки - делаем его видимым
+    buttonCloseText.classList.remove('hidden');
 
-  //расширяем окно
-  mainText.classList.add('main__text--open');
+    //добавить класс у открывающей кнопки - делаем его невидимым
+    buttonOpenText.classList.add('hidden');
+
+    //расширяем окно
+    mainText.classList.add('main__text--open');
+  }
 });
 
 //отслеживаем клик по кнопке "закрыть список"

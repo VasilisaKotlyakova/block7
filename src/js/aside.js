@@ -5,6 +5,8 @@ let main = document.querySelector('.wrapper-main');
 let header = document.querySelector('.header');
 let aside= document.querySelector('.aside');
 
+
+
 //отслеживаем клик по кнопке
 buttonBurger.addEventListener('click', function() {
   main.classList.add('opacity');
@@ -23,6 +25,13 @@ buttonBurger.addEventListener('click', function() {
 });
 
 buttonClose.addEventListener('click', function() {
+  aside.classList.add('modal');
+  main.classList.remove('opacity');
+  header.classList.remove('opacity');
+});
+
+main.addEventListener("click", function() {
+
   aside.classList.add('modal');
   main.classList.remove('opacity');
   header.classList.remove('opacity');

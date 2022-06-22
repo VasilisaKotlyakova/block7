@@ -34,7 +34,7 @@ if (window.matchMedia("(min-width: 768px)").matches) {
     }
   });
 
-  const swiper_price = new Swiper('.price__row', {
+  const swiper_price = new Swiper('.price__list', {
     direction: 'horizontal',
     slidesPerView: "auto",
     //отступ между слайдами
