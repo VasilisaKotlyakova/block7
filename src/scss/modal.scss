@@ -17,8 +17,28 @@
   z-index: 2;
   height: 1950px;
   background-color: $white;
+  animation-name: modal-open;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
+@keyframes modal-open {
+  from {
+    position: absolute;
+    z-index: 1;
+    right: -320px;
+    height: 1950px;
+    background-color: $white;
+}
+  to {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    height: 1950px;
+    background-color: $white;
+  }
+}
 .modal--hide{
   display: none;
 }

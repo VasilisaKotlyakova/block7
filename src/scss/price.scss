@@ -113,7 +113,7 @@ h2 {
     width: 24px;
     background-image: url(../img/goside.svg);
     background-repeat: no-repeat;
-    padding-right: 5px;
+    padding-right: 10px;
     padding-bottom: 5px;
   }
 
@@ -174,7 +174,7 @@ h2 {
     height: 12px;
   }
 
-  .price__row .blur-right {
+  .price__list::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -183,19 +183,19 @@ h2 {
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     right: -5px;
-    bottom: -100px;
+    bottom: 0px;
   }
 
-  .price__row .blur-left {
+  .price__list::before {
     display: flex;
     content: " ";
     width: 24px;
     height: 210px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     z-index: 5;
     left: -15px;
-    bottom: -100px;
+    bottom: 0px;
   }
 
   .price__text {

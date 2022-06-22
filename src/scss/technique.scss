@@ -9,9 +9,8 @@ h2 {
 .technique__list {
   display: flex;
   flex-direction: row;
-  //justify-content: center;
   align-content: space-between;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .technique__card {
@@ -76,7 +75,7 @@ h2 {
   }
 
 
-  .technique__row .blur-right {
+  .technique__list::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -84,20 +83,20 @@ h2 {
     z-index: 5;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
-    right: -5px;
-    bottom: 275px;
+    right: 5px;
+    bottom: 0px;
   }
 
-  .technique__row .blur-left {
+  .technique__list::before {
     display: flex;
     content: " ";
     width: 24px;
     height: 166px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     z-index: 5;
-    left: -15px;
-    bottom: 275px;
+    left: -10px;
+    bottom: 0px;
   }
 }
 
@@ -122,8 +121,6 @@ h2 {
     flex: 1 1 224px;
     margin-right: 15px;
     margin-bottom: 20px;
-    //margin-left: 0px;
-    //width: 224px;
   }
 
   .technique__button--open, .technique__button--close {
@@ -177,10 +174,18 @@ h2 {
     width: 1120px;
     margin-left: 20px;
     margin-top: 30px;
+    overflow: hidden;
+
+    height: 180px;
+  }
+
+  .technique__list--open {
+    height: 350px;
   }
 
   .technique__card {
     margin-right: 20px;
+    margin-bottom: 20px;
   }
 
   .technique__button--open, .technique__button--close {

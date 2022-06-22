@@ -71,7 +71,7 @@
     order: 1;
   }
 
-  .brand__row .blur-right {
+  .brand__list::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -83,15 +83,15 @@
     top: 730px;
   }
 
-  .brand__row .blur-left {
+  .brand__list::before {
     display: flex;
     content: " ";
     width: 24px;
     height: 81px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     z-index: 5;
-    left: -15px;
+    left: -5px;
     top: 730px;
   }
 }
