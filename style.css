@@ -336,7 +336,6 @@ ul > li > a:hover {
 .brand__list {
   display: flex;
   flex-direction: row;
-  align-content: space-between;
   flex-wrap: wrap; }
 
 .brand__card {
@@ -417,13 +416,18 @@ ul > li > a:hover {
     height: 170px;
     overflow: hidden; }
   .brand__list--open {
-    height: 350px;
-    padding-bottom: 50px; }
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    height: 320px;
+    padding-bottom: 60px;
+    margin-bottom: 10px; }
   .brand__card {
     flex: 1 1 224px;
     height: 72px;
     margin-left: 14px;
-    margin-right: 10px; }
+    margin-right: 10px;
+    margin-bottom: 5px; }
   .brand__button--open, .brand__button--close {
     display: flex;
     flex-direction: row;
@@ -460,6 +464,9 @@ ul > li > a:hover {
     padding-bottom: 24px;
     justify-content: center; }
   .brand__list--open {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
     height: 250px;
     padding-bottom: 50px; }
   .brand__card {
@@ -720,6 +727,8 @@ h2 {
 
 @media (min-width: 320px) and (max-width: 767px) {
   .price__list {
+    display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     margin-left: 10px;
     margin-bottom: 50px;
@@ -786,7 +795,7 @@ h2 {
     letter-spacing: 0.2px;
     color: black;
     margin-top: 4px; }
-  .price__row .swiper-pagination {
+  .wrapper-price .swiper-pagination {
     position: relative;
     bottom: 20px; }
   .swiper-pagination-bullet {
@@ -824,38 +833,38 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 768px;
-    max-width: 1439px; }
+    min-width: 668px;
+    max-width: 1439px;
+    padding-right: 20px;
+    padding-left: 20px; }
   .price__list {
     display: flex;
     flex-direction: column;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 730px;
+    justify-content: space-between;
+    align-items: stretch;
+    min-width: 660px;
     height: 324px;
     background-color: #FFFFFF;
     border: 1px solid #EAEAEA;
-    border-radius: 6px;
-    margin-left: 20px;
-    margin-right: 20px; }
+    border-radius: 6px; }
   .price__card h3 {
     display: none; }
   .price__card, .price__card--head {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-content: center;
+    justify-content: space-between;
+    align-content: space-evenly;
     height: 65px; }
   .price__card--head {
     margin-left: -200px; }
   .price__card p:first-of-type {
-    padding: 24px 24px 24px 14px; }
+    padding: 25px 20px 20px 14px; }
   .price__card p:not(:nth-child(2)) {
     padding-top: 24px; }
   .price__card button {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 119px;
     height: 32px;
@@ -869,9 +878,8 @@ h2 {
     text-transform: uppercase;
     color: white;
     padding-left: 10px;
-    position: relative;
-    bottom: -20px;
-    left: 10px; }
+    margin-top: 20px;
+    margin-right: 10px; }
   .price__card button::after {
     display: inline-block;
     content: " ";
@@ -882,23 +890,24 @@ h2 {
     padding-right: 5px;
     padding-bottom: 5px; }
   .price__card:nth-child(4) p:nth-child(4) {
-    padding-left: -40px; }
+    padding-right: 20px; }
   .price__card:nth-child(4) p:nth-child(6) {
-    padding-left: 20px; }
+    padding-right: 10px; }
   .price__card:nth-child(5) p:nth-child(4), .price__card:nth-child(3) p:nth-child(4) {
-    padding-left: 110px; }
+    padding-left: 100px; }
   .price__card:nth-child(5) p:nth-child(6), .price__card:nth-child(3) p:nth-child(6) {
-    padding-left: 20px; }
+    padding-left: 10px; }
   .price__card:nth-child(2) p:nth-child(4) {
-    padding-left: 260px; }
+    padding-left: 250px; }
   .price__card:nth-child(2) p:nth-child(6) {
-    padding-left: 20px; }
+    padding-left: 10px; }
   .price__card:nth-child(1) p:nth-child(4) {
-    padding-left: 270px; }
+    padding-left: 280px; }
   .price__card:nth-child(1) p:nth-child(6) {
-    padding-left: 20px; }
-  .price__card:nth-child(1) button {
-    left: 35px; }
+    padding-right: 40px; }
+  /*.price__card:nth-child(1) button {
+    left: 35px;
+  }*/
   .price__card {
     border-bottom: 1px solid #EAEAEA; }
   .price__card--head h3:nth-child(1) {
@@ -915,8 +924,11 @@ h2 {
     height: 60px;
     margin-top: 20px;
     margin-left: 25px; }
-  .price__button {
-    margin-left: 40px; } }
+  /*.price__button {
+    //margin-left: 40px;
+
+    margin-right: 20px;
+  }*/ }
 
 @media (min-width: 1440px) {
   h2 {
@@ -1091,7 +1103,7 @@ h2 {
   color: black;
   background-color: white;
   width: 320px;
-  z-index: 5;
+  z-index: 2;
   height: 100% !important; }
 
 .aside-header__row {
@@ -1255,7 +1267,8 @@ h2 {
 
 @media (min-width: 320px) and (max-width: 767px) {
   .modal {
-    display: none; }
+    display: none;
+    opacity: 0; }
   .aside {
     width: 320px;
     background-color: white;
@@ -1279,7 +1292,8 @@ h2 {
   .aside-menu {
     flex: 1 1 320px; }
   .modal {
-    display: none; } }
+    display: none;
+    opacity: 0; } }
 
 @media (min-width: 1440px) {
   .aside .wrapper {
@@ -1308,7 +1322,7 @@ h2 {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 2;
+  z-index: 5;
   height: 1950px;
   background-color: white;
   -webkit-animation-name: modal-open;
@@ -1507,8 +1521,10 @@ button.hidden {
   opacity: 0.1; }
 
 button {
-  cursor: pointer;
-  z-index: 10; }
+  cursor: pointer; }
+
+.close {
+  z-index: 5; }
 
 @media (min-width: 1440px) {
   h2 {
@@ -1537,7 +1553,6 @@ button {
 .brand__list {
   display: flex;
   flex-direction: row;
-  align-content: space-between;
   flex-wrap: wrap; }
 
 .brand__card {
@@ -1618,13 +1633,18 @@ button {
     height: 170px;
     overflow: hidden; }
   .brand__list--open {
-    height: 350px;
-    padding-bottom: 50px; }
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    height: 320px;
+    padding-bottom: 60px;
+    margin-bottom: 10px; }
   .brand__card {
     flex: 1 1 224px;
     height: 72px;
     margin-left: 14px;
-    margin-right: 10px; }
+    margin-right: 10px;
+    margin-bottom: 5px; }
   .brand__button--open, .brand__button--close {
     display: flex;
     flex-direction: row;
@@ -1661,6 +1681,9 @@ button {
     padding-bottom: 24px;
     justify-content: center; }
   .brand__list--open {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
     height: 250px;
     padding-bottom: 50px; }
   .brand__card {
@@ -1921,6 +1944,8 @@ h2 {
 
 @media (min-width: 320px) and (max-width: 767px) {
   .price__list {
+    display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     margin-left: 10px;
     margin-bottom: 50px;
@@ -1987,7 +2012,7 @@ h2 {
     letter-spacing: 0.2px;
     color: black;
     margin-top: 4px; }
-  .price__row .swiper-pagination {
+  .wrapper-price .swiper-pagination {
     position: relative;
     bottom: 20px; }
   .swiper-pagination-bullet {
@@ -2025,38 +2050,38 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 768px;
-    max-width: 1439px; }
+    min-width: 668px;
+    max-width: 1439px;
+    padding-right: 20px;
+    padding-left: 20px; }
   .price__list {
     display: flex;
     flex-direction: column;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 730px;
+    justify-content: space-between;
+    align-items: stretch;
+    min-width: 660px;
     height: 324px;
     background-color: #FFFFFF;
     border: 1px solid #EAEAEA;
-    border-radius: 6px;
-    margin-left: 20px;
-    margin-right: 20px; }
+    border-radius: 6px; }
   .price__card h3 {
     display: none; }
   .price__card, .price__card--head {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-content: center;
+    justify-content: space-between;
+    align-content: space-evenly;
     height: 65px; }
   .price__card--head {
     margin-left: -200px; }
   .price__card p:first-of-type {
-    padding: 24px 24px 24px 14px; }
+    padding: 25px 20px 20px 14px; }
   .price__card p:not(:nth-child(2)) {
     padding-top: 24px; }
   .price__card button {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 119px;
     height: 32px;
@@ -2070,9 +2095,8 @@ h2 {
     text-transform: uppercase;
     color: white;
     padding-left: 10px;
-    position: relative;
-    bottom: -20px;
-    left: 10px; }
+    margin-top: 20px;
+    margin-right: 10px; }
   .price__card button::after {
     display: inline-block;
     content: " ";
@@ -2083,23 +2107,24 @@ h2 {
     padding-right: 5px;
     padding-bottom: 5px; }
   .price__card:nth-child(4) p:nth-child(4) {
-    padding-left: -40px; }
+    padding-right: 20px; }
   .price__card:nth-child(4) p:nth-child(6) {
-    padding-left: 20px; }
+    padding-right: 10px; }
   .price__card:nth-child(5) p:nth-child(4), .price__card:nth-child(3) p:nth-child(4) {
-    padding-left: 110px; }
+    padding-left: 100px; }
   .price__card:nth-child(5) p:nth-child(6), .price__card:nth-child(3) p:nth-child(6) {
-    padding-left: 20px; }
+    padding-left: 10px; }
   .price__card:nth-child(2) p:nth-child(4) {
-    padding-left: 260px; }
+    padding-left: 250px; }
   .price__card:nth-child(2) p:nth-child(6) {
-    padding-left: 20px; }
+    padding-left: 10px; }
   .price__card:nth-child(1) p:nth-child(4) {
-    padding-left: 270px; }
+    padding-left: 280px; }
   .price__card:nth-child(1) p:nth-child(6) {
-    padding-left: 20px; }
-  .price__card:nth-child(1) button {
-    left: 35px; }
+    padding-right: 40px; }
+  /*.price__card:nth-child(1) button {
+    left: 35px;
+  }*/
   .price__card {
     border-bottom: 1px solid #EAEAEA; }
   .price__card--head h3:nth-child(1) {
@@ -2116,8 +2141,11 @@ h2 {
     height: 60px;
     margin-top: 20px;
     margin-left: 25px; }
-  .price__button {
-    margin-left: 40px; } }
+  /*.price__button {
+    //margin-left: 40px;
+
+    margin-right: 20px;
+  }*/ }
 
 @media (min-width: 1440px) {
   h2 {
