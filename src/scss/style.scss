@@ -99,7 +99,10 @@ button.hidden {
 
 button {
   cursor: pointer;
-  z-index: 10;
+}
+
+.close {
+  z-index: 5;
 }
 
 @media (min-width: 1440px) {

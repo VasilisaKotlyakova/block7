@@ -3,7 +3,6 @@
 .brand__list {
   display: flex;
   flex-direction: row;
-  align-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -112,8 +111,12 @@
   }
 
   .brand__list--open {
-    height: 350px;
-    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    height: 320px;
+    padding-bottom: 60px;
+    margin-bottom: 10px;
   }
 
   .brand__card {
@@ -123,6 +126,7 @@
     height: 72px;
     margin-left: 14px;
     margin-right: 10px;
+    margin-bottom: 5px;
 
   }
 
@@ -178,6 +182,9 @@
   }
 
   .brand__list--open {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
     height: 250px;
     padding-bottom: 50px;
   }
