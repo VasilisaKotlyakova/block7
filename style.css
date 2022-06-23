@@ -856,7 +856,8 @@ h2 {
     align-content: space-evenly;
     height: 65px; }
   .price__card--head {
-    margin-left: -200px; }
+    min-width: 768px;
+    margin-left: 20px; }
   .price__card p:first-of-type {
     padding: 25px 20px 20px 14px; }
   .price__card p:not(:nth-child(2)) {
@@ -905,30 +906,22 @@ h2 {
     padding-left: 280px; }
   .price__card:nth-child(1) p:nth-child(6) {
     padding-right: 40px; }
-  /*.price__card:nth-child(1) button {
-    left: 35px;
-  }*/
   .price__card {
     border-bottom: 1px solid #EAEAEA; }
   .price__card--head h3:nth-child(1) {
-    padding-left: 35px;
+    padding-left: 20px;
     padding-top: 20px; }
   .price__card--head h3:nth-child(2) {
-    padding-left: 260px;
+    padding-left: 210px;
     padding-top: 20px; }
   .price__card--head h3:nth-child(3) {
-    padding-left: 50px;
+    padding-right: 210px;
     padding-top: 20px; }
   .price__text {
     width: 421px;
     height: 60px;
     margin-top: 20px;
-    margin-left: 25px; }
-  /*.price__button {
-    //margin-left: 40px;
-
-    margin-right: 20px;
-  }*/ }
+    margin-left: 25px; } }
 
 @media (min-width: 1440px) {
   h2 {
@@ -2073,7 +2066,8 @@ h2 {
     align-content: space-evenly;
     height: 65px; }
   .price__card--head {
-    margin-left: -200px; }
+    min-width: 768px;
+    margin-left: 20px; }
   .price__card p:first-of-type {
     padding: 25px 20px 20px 14px; }
   .price__card p:not(:nth-child(2)) {
@@ -2122,30 +2116,22 @@ h2 {
     padding-left: 280px; }
   .price__card:nth-child(1) p:nth-child(6) {
     padding-right: 40px; }
-  /*.price__card:nth-child(1) button {
-    left: 35px;
-  }*/
   .price__card {
     border-bottom: 1px solid #EAEAEA; }
   .price__card--head h3:nth-child(1) {
-    padding-left: 35px;
+    padding-left: 20px;
     padding-top: 20px; }
   .price__card--head h3:nth-child(2) {
-    padding-left: 260px;
+    padding-left: 210px;
     padding-top: 20px; }
   .price__card--head h3:nth-child(3) {
-    padding-left: 50px;
+    padding-right: 210px;
     padding-top: 20px; }
   .price__text {
     width: 421px;
     height: 60px;
     margin-top: 20px;
-    margin-left: 25px; }
-  /*.price__button {
-    //margin-left: 40px;
-
-    margin-right: 20px;
-  }*/ }
+    margin-left: 25px; } }
 
 @media (min-width: 1440px) {
   h2 {
