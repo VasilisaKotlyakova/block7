@@ -17,14 +17,12 @@ const name = document.querySelector(".name");
 
 const wrapper = document.querySelector(".wrapper-main");
 
-
 chatButton.addEventListener("click", function() {
   hFeedback.classList.remove("hidden");
   feedBackModal.classList.toggle("modal--hide");
   header.classList.add("opacity");
   main.classList.add("opacity");
   aside.classList.add("opacity");
-  console.log('yes');
 });
 
 callButton.addEventListener("click", function() {
@@ -45,7 +43,13 @@ chatButtonAside.addEventListener("click", function() {
   feedBackModal.classList.toggle("modal--hide");
   header.classList.add("opacity");
   main.classList.add("opacity");
-  aside.classList.add("opacity");
+  if(window.innerWidth >= 320 && window.innerWidth < 1440)
+  {
+    aside.classList.add('modal');
+  }
+  else {
+    aside.classList.add('opacity');
+  }
   console.log('yes');
 });
 
@@ -58,8 +62,13 @@ callButtonAside.addEventListener("click", function() {
   feedBackModal.classList.toggle("modal--hide");
   header.classList.add("opacity");
   main.classList.add("opacity");
-  aside.classList.add("opacity");
-  console.log('yes');
+  if(window.innerWidth >= 320 && window.innerWidth < 1440)
+  {
+    aside.classList.add('modal');
+  }
+  else {
+    aside.classList.add('opacity');
+  }
 });
 
 closeButton.addEventListener("click", function() {

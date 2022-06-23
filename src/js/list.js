@@ -64,7 +64,7 @@ let mainText = document.querySelector('.main__text'); // ищем текст
 //отслеживаем клик по кнопке развернуть
 buttonOpenText.addEventListener('click', function(){
 
-  if(window.innerWidth >= 320 && window.innerWidth < 1440) {
+  if(window.innerWidth >= 320 && window.innerWidth < 1200) {
     //удаляем скрывающий класс у закрывающей кнопки - делаем его видимым
     buttonCloseText.classList.remove('hidden');
 

@@ -5,10 +5,9 @@ let main = document.querySelector('.wrapper-main');
 let header = document.querySelector('.header');
 let aside= document.querySelector('.aside');
 
-
-
 //отслеживаем клик по кнопке
 buttonBurger.addEventListener('click', function() {
+
   main.classList.add('opacity');
   header.classList.add('opacity');
   aside.classList.remove('modal');
