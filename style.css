@@ -384,7 +384,7 @@ ul > li > a:hover {
     flex: 1 0 240px;
     height: 72px;
     order: 1; }
-  .brand__list::after {
+  .brand__row::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -394,7 +394,7 @@ ul > li > a:hover {
     position: absolute;
     right: -5px;
     top: 730px; }
-  .brand__list::before {
+  .brand__row::before {
     display: flex;
     content: " ";
     width: 24px;
@@ -558,7 +558,7 @@ h2 {
     background-color: #B5B6BC;
     width: 12px;
     height: 12px; }
-  .technique__list::after {
+  .technique__row::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -566,9 +566,9 @@ h2 {
     z-index: 5;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
-    right: 5px;
-    bottom: 0px; }
-  .technique__list::before {
+    right: 0px;
+    bottom: 275px; }
+  .technique__row::before {
     display: flex;
     content: " ";
     width: 24px;
@@ -577,7 +577,7 @@ h2 {
     position: absolute;
     z-index: 5;
     left: -10px;
-    bottom: 0px; } }
+    bottom: 275px; } }
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .technique__list {
@@ -802,7 +802,7 @@ h2 {
     background-color: #B5B6BC;
     width: 12px;
     height: 12px; }
-  .price__list::after {
+  .price__row::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -811,8 +811,8 @@ h2 {
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     right: -5px;
-    bottom: 0px; }
-  .price__list::before {
+    bottom: -100px; }
+  .price__row::before {
     display: flex;
     content: " ";
     width: 24px;
@@ -821,7 +821,7 @@ h2 {
     position: absolute;
     z-index: 5;
     left: -15px;
-    bottom: 0px; }
+    bottom: -100px; }
   .price__text {
     margin-left: 10px; }
   .price__button {
@@ -849,15 +849,14 @@ h2 {
     border-radius: 6px; }
   .price__card h3 {
     display: none; }
-  .price__card, .price__card--head {
+  .price__card {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: space-evenly;
     height: 65px; }
   .price__card--head {
-    min-width: 768px;
-    margin-left: 20px; }
+    margin-left: -200px; }
   .price__card p:first-of-type {
     padding: 25px 20px 20px 14px; }
   .price__card p:not(:nth-child(2)) {
@@ -906,17 +905,24 @@ h2 {
     padding-left: 280px; }
   .price__card:nth-child(1) p:nth-child(6) {
     padding-right: 40px; }
+  .price__card--head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    min-width: 768px;
+    width: 100%;
+    margin: 20px; }
   .price__card {
     border-bottom: 1px solid #EAEAEA; }
   .price__card--head h3:nth-child(1) {
-    padding-left: 20px;
-    padding-top: 20px; }
+    padding-left: 10px;
+    margin-left: 20px; }
   .price__card--head h3:nth-child(2) {
-    padding-left: 210px;
-    padding-top: 20px; }
+    margin-left: 200px; }
   .price__card--head h3:nth-child(3) {
-    padding-right: 210px;
-    padding-top: 20px; }
+    margin-right: 140px; }
   .price__text {
     width: 421px;
     height: 60px;
@@ -1096,7 +1102,7 @@ h2 {
   color: black;
   background-color: white;
   width: 320px;
-  z-index: 2;
+  z-index: 80;
   height: 100% !important; }
 
 .aside-header__row {
@@ -1235,27 +1241,27 @@ h2 {
 @-webkit-keyframes aside-open {
   from {
     position: absolute;
-    z-index: 1;
+    z-index: 80;
     left: -320px;
     background-color: white; }
   to {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 80;
     background-color: white; } }
 
 @keyframes aside-open {
   from {
     position: absolute;
-    z-index: 1;
+    z-index: 80;
     left: -320px;
     background-color: white; }
   to {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 80;
     background-color: white; } }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -1315,7 +1321,7 @@ h2 {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 5;
+  z-index: 80;
   height: 1950px;
   background-color: white;
   -webkit-animation-name: modal-open;
@@ -1328,7 +1334,7 @@ h2 {
 @-webkit-keyframes modal-open {
   from {
     position: absolute;
-    z-index: 1;
+    z-index: 70;
     right: -320px;
     height: 1950px;
     background-color: white; }
@@ -1336,14 +1342,14 @@ h2 {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 80;
     height: 1950px;
     background-color: white; } }
 
 @keyframes modal-open {
   from {
     position: absolute;
-    z-index: 1;
+    z-index: 70;
     right: -320px;
     height: 1950px;
     background-color: white; }
@@ -1351,7 +1357,7 @@ h2 {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 80;
     height: 1950px;
     background-color: white; } }
 
@@ -1519,6 +1525,13 @@ button {
 .close {
   z-index: 5; }
 
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 60; }
+
 @media (min-width: 1440px) {
   h2 {
     width: 1040px !important; }
@@ -1594,7 +1607,7 @@ button {
     flex: 1 0 240px;
     height: 72px;
     order: 1; }
-  .brand__list::after {
+  .brand__row::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -1604,7 +1617,7 @@ button {
     position: absolute;
     right: -5px;
     top: 730px; }
-  .brand__list::before {
+  .brand__row::before {
     display: flex;
     content: " ";
     width: 24px;
@@ -1768,7 +1781,7 @@ h2 {
     background-color: #B5B6BC;
     width: 12px;
     height: 12px; }
-  .technique__list::after {
+  .technique__row::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -1776,9 +1789,9 @@ h2 {
     z-index: 5;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
-    right: 5px;
-    bottom: 0px; }
-  .technique__list::before {
+    right: 0px;
+    bottom: 275px; }
+  .technique__row::before {
     display: flex;
     content: " ";
     width: 24px;
@@ -1787,7 +1800,7 @@ h2 {
     position: absolute;
     z-index: 5;
     left: -10px;
-    bottom: 0px; } }
+    bottom: 275px; } }
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .technique__list {
@@ -2012,7 +2025,7 @@ h2 {
     background-color: #B5B6BC;
     width: 12px;
     height: 12px; }
-  .price__list::after {
+  .price__row::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -2021,8 +2034,8 @@ h2 {
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
     right: -5px;
-    bottom: 0px; }
-  .price__list::before {
+    bottom: -100px; }
+  .price__row::before {
     display: flex;
     content: " ";
     width: 24px;
@@ -2031,7 +2044,7 @@ h2 {
     position: absolute;
     z-index: 5;
     left: -15px;
-    bottom: 0px; }
+    bottom: -100px; }
   .price__text {
     margin-left: 10px; }
   .price__button {
@@ -2059,15 +2072,14 @@ h2 {
     border-radius: 6px; }
   .price__card h3 {
     display: none; }
-  .price__card, .price__card--head {
+  .price__card {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: space-evenly;
     height: 65px; }
   .price__card--head {
-    min-width: 768px;
-    margin-left: 20px; }
+    margin-left: -200px; }
   .price__card p:first-of-type {
     padding: 25px 20px 20px 14px; }
   .price__card p:not(:nth-child(2)) {
@@ -2116,17 +2128,24 @@ h2 {
     padding-left: 280px; }
   .price__card:nth-child(1) p:nth-child(6) {
     padding-right: 40px; }
+  .price__card--head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    min-width: 768px;
+    width: 100%;
+    margin: 20px; }
   .price__card {
     border-bottom: 1px solid #EAEAEA; }
   .price__card--head h3:nth-child(1) {
-    padding-left: 20px;
-    padding-top: 20px; }
+    padding-left: 10px;
+    margin-left: 20px; }
   .price__card--head h3:nth-child(2) {
-    padding-left: 210px;
-    padding-top: 20px; }
+    margin-left: 200px; }
   .price__card--head h3:nth-child(3) {
-    padding-right: 210px;
-    padding-top: 20px; }
+    margin-right: 140px; }
   .price__text {
     width: 421px;
     height: 60px;
