@@ -75,7 +75,7 @@ h2 {
   }
 
 
-  .technique__list::after {
+  .technique__row::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -83,11 +83,11 @@ h2 {
     z-index: 5;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     position: absolute;
-    right: 5px;
-    bottom: 0px;
+    right: 0px;
+    bottom: 275px;
   }
 
-  .technique__list::before {
+  .technique__row::before {
     display: flex;
     content: " ";
     width: 24px;
@@ -96,7 +96,7 @@ h2 {
     position: absolute;
     z-index: 5;
     left: -10px;
-    bottom: 0px;
+    bottom: 275px;
   }
 }
 

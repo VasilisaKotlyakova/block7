@@ -70,7 +70,7 @@
     order: 1;
   }
 
-  .brand__list::after {
+  .brand__row::after {
     display: flex;
     content: " ";
     width: 24px;
@@ -82,7 +82,7 @@
     top: 730px;
   }
 
-  .brand__list::before {
+  .brand__row::before {
     display: flex;
     content: " ";
     width: 24px;

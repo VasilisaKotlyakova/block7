@@ -105,6 +105,15 @@ button {
   z-index: 5;
 }
 
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  z-index: 60;
+}
+
 @media (min-width: 1440px) {
 
   h2{
@@ -114,8 +123,7 @@ button {
   .aside {
     display: flex;
     flex-direction: column;
-    position: relative;//static;
-    //min-height: 200% !important;
+    position: relative;
     background-color: $white;
     padding-bottom: 1000px;
   }

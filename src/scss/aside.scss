@@ -9,7 +9,7 @@
   color: black;
   background-color: $white;
   width: 320px;
-  z-index: 2;
+  z-index: 80;
 
   height: 100% !important;
 }
@@ -184,7 +184,7 @@
 @keyframes aside-open {
   from {
     position: absolute;
-    z-index: 1;
+    z-index: 80;
     left: -320px;
     background-color: $white;
   }
@@ -192,7 +192,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 80;
     background-color: $white;
   }
 }
