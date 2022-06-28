@@ -28,6 +28,8 @@ buttonClose.addEventListener('click', function() {
   aside.classList.add('modal');
   overlay.classList.add("hidden");
 
+  body.style.overflow = 'auto';
+
   //инициализируем swiper
   if (window.matchMedia("(min-width: 768px)").matches) {
     /* the viewport is at least 768 pixels wide */
@@ -80,6 +82,8 @@ overlay.addEventListener("click", function() {
   aside.classList.add('modal');
 
   overlay.classList.add("hidden");
+
+  body.style.overflow = 'auto';
 
   if (window.matchMedia("(min-width: 768px)").matches) {
     /* the viewport is at least 768 pixels wide */

@@ -15,6 +15,7 @@ const email = document.querySelector(".email");
 const name = document.querySelector(".name");
 
 const overlay = document.querySelector(".overlay");
+let body = document.querySelector('body');
 
 chatButton.addEventListener("click", function() {
   hFeedback.classList.remove("hidden");
@@ -79,6 +80,8 @@ closeButton.addEventListener("click", function() {
   feedBackModal.classList.toggle("modal--hide");
 
   overlay.classList.add("hidden");
+
+  body.style.overflow = 'auto';
 });
 
 overlay.addEventListener("click", function() {
@@ -91,4 +94,5 @@ overlay.addEventListener("click", function() {
   feedBackModal.classList.add("modal--hide");
 
   overlay.classList.add("hidden");
+  body.style.overflow = 'auto';
 });
